@@ -33,7 +33,7 @@ git push -u origin main
 3. Go to your talaarawan repository
 
 4. Click pull request
-![pull request]()
+![pull request](https://github.com/glendell03/talaarawan/blob/main/pull-request.png)
 
 5. Create Pull request
 
