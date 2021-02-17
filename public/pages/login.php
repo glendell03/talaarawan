@@ -87,6 +87,9 @@
         section{
             padding-top: 82px;
         }
+        .logo1{
+            margin-top: -20px;
+        }
     </style>
   </head>
   <body>
@@ -99,7 +102,7 @@
                 </div>
                 <div class="col-lg-7 px-5 pt-5">
                     <div class="torq"> 
-                    <h2 class="logo font-weight-bold py-3">LOGIN TO talaarawan</h2> 
+                    <h2 class="logo font-weight-bold py-3">LOGIN TO <img src="./Talaarawan.png" alt="" class="logo1"></h2> 
 
                     <form>
                         <div class="form-row">
