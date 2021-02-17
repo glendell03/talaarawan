@@ -119,21 +119,21 @@
                         <div class="torq">
                             <h2 class="logo font-weight-bold py-3">LOGIN TO talaarawan</h2>
 
-                            <form>
+                            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
                                 <div class="form-row">
                                     <div class="col-lg-7">
-                                        <input type="email" placeholder="Email" class="form-control my-3 p-4">
+                                        <input type="email" name="email" value="<?php echo $email; ?>" placeholder="Email" class="form-control my-3 p-4">
                                     </div>
                                 </div>
 
                                 <div class="form-row">
                                     <div class="col-lg-7">
-                                        <input type="password" placeholder="Password" class="form-control my-3 p-4">
+                                        <input type="password" name="password" value="<?php echo $password; ?>" placeholder="Password" class="form-control my-3 p-4">
                                     </div>
                                 </div>
                                 <div class="form-row">
                                     <div class="col-lg-7">
-                                        <button type="button" class="btn1 mt-3 mb-5" a href="#">LOGIN</button></a>
+                                        <button type="submit" class="btn1 mt-3 mb-5" a href="#">LOGIN</button></a>
                                     </div>
                                 </div>
                                 <div class="other">

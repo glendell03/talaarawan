@@ -2,7 +2,7 @@
     session_start();
 
     if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
-        header("location: index.php");
+        header("location: ../index.php");
         exit;
     }
      require_once "config.php";
@@ -25,7 +25,7 @@
         }
 
         if(empty($email_err) && empty($password_err)){
-            $sql = "SELECT id, email, password FROM users WHERE email = ?";
+            $sql = "SELECT user_id, email, password FROM users WHERE email = ?";
 
             if($stmt = mysqli_prepare($link, $sql)){
                 mysqli_stmt_bind_param($stmt, "s", $param_email);
@@ -48,7 +48,7 @@
                             $_SESSION["email"] = $email;                            
                             
                             
-                            header("location: index.php");
+                            header("location: ../index.php");
                         } else{
                             
                             $password_err = "The password you entered was not valid.";
@@ -67,4 +67,3 @@
         }
     mysqli_close($link);
 }
-?>
