@@ -13,6 +13,7 @@
 </head>
 
 <body>
+<button><a href="../server/logout.php">Signout</a></button>
     <!-- DIARY -->
 
     <!-- <div class="note-modal">
