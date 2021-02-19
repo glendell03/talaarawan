@@ -1,6 +1,14 @@
 <?php include "../server/createNote.php" ?>
 <?php include "../server/readNote.php" ?>
 
+<?php
+session_start();
+if ($_SESSION["loggedin"] === false) {
+    header("location: auth/login.php");
+    exit;
+}
+?>
+
 
 <!DOCTYPE html>
 <html lang="en">
