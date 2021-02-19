@@ -3,7 +3,7 @@
 
 <?php
 session_start();
-if ($_SESSION["loggedin"] === false) {
+if ($_SESSION["loggedin"] === null) {
     header("location: auth/login.php");
     exit;
 }
@@ -21,7 +21,7 @@ if ($_SESSION["loggedin"] === false) {
 </head>
 
 <body>
-<button><a href="../server/logout.php">Signout</a></button>
+    <button><a href="../server/logout.php">Signout</a></button>
     <!-- DIARY -->
 
     <!-- <div class="note-modal">
