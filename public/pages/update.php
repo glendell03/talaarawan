@@ -1,3 +1,5 @@
+<?php include "../../server/updateNote.php" ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,9 +13,9 @@
 <body>
     <!-- UPDATE -->
     <div class="note-modal">
-        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-            <input type="text" name="title" value="" placeholder="title">
-            <textarea type="text" name="description" value="" placeholder="description"></textarea>
+        <form action="<?php echo htmlspecialchars(basename($_SERVER['REQUEST_URI'])); ?>" method="post">
+            <input type="text" name="title" value="<?php echo $title ?>" placeholder="title">
+            <textarea type="text" name="description" value="<?php echo $description ?>" placeholder="description"></textarea>
             <button type="submit">submit</button>
         </form>
     </div>

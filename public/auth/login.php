@@ -1,4 +1,4 @@
-<?php include "../../server/auth/login.php" ?>
+<?php include "../../server/login.php" ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -139,7 +139,7 @@
                                 </div>
                                 <div class="other">
                                     <p><a href="#"> Forgot Password?</a></p>
-                                    <p>Don't have an account? <a href="signup.html">Sign up now!</a></p>
+                                    <p>Don't have an account? <a href="register.php">Sign up now!</a></p>
                                 </div>
                         </div>
                         </form>
