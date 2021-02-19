@@ -21,7 +21,7 @@ if ($_SESSION["loggedin"] === null) {
 </head>
 
 <body>
-    <button><a href="../server/logout.php">Signout</a></button>
+    <button><a href="../server/auth/logout.php">Signout</a></button>
     <!-- DIARY -->
 
     <!-- <div class="note-modal">
@@ -81,7 +81,7 @@ if ($_SESSION["loggedin"] === null) {
                 </div>
 
                 <div class="cta">
-                    <button><a href="./pages/update.php?id=<?= $row["note_id"] ?>">Update</a></button>
+                    <button><a href="./pages/update.php?id=<?php echo $row["note_id"] ?>">Update</a></button>
                 </div>
             </div>
         <?php
