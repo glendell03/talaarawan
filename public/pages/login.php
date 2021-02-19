@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,10 +17,12 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href= "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
 
-    <title>Login</title>
+<title>Login</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
         *{
             padding: 0; 
             margin: 0;
@@ -48,6 +51,8 @@
             display: block;
             margin-left: 150px;
             margin-bottom: 68px;
+            font-family: 'Nunito', sans-serif;
+            size: 24px;
 
             
         }
@@ -55,6 +60,8 @@
             background-color: white;
             border: 1px solid;
             color: black;
+            font-family: 'Nunito', sans-serif;
+            size: 24px;
         }
         .torq{
             background-color: #CAEFDB;
@@ -87,9 +94,28 @@
         section{
             padding-top: 82px;
         }
-        .logo1{
-            margin-top: -20px;
+    
+        i{ 
+            padding: 30px; 
+            position: absolute; 
+            margin-top: -1px;
+            padding-left: 20px;
+        }   
+        input::placeholder{
+            padding-left: 60px;
         }
+        .other{
+            line-height: 5px;
+        }
+        p.logo{
+            font-family: 'Pacifico', cursive;
+            position: absolute;
+            margin-top: -40px;
+            margin-left: 110px;
+
+        }
+        
+
     </style>
   </head>
   <body>
@@ -102,17 +128,19 @@
                 </div>
                 <div class="col-lg-7 px-5 pt-5">
                     <div class="torq"> 
-                    <h2 class="logo font-weight-bold py-3">LOGIN TO <img src="./Talaarawan.png" alt="" class="logo1"></h2> 
+                    <h2 class="logo font-weight-bold py-3">LOGIN TO <p class="logo">Talaarawan</p></h2> 
 
                     <form>
                         <div class="form-row">
                             <div class="col-lg-7">
+                                <i class="fa fa-envelope" style="font-size:24px"></i>
                                 <input type="email" placeholder="Email" class="form-control my-3 p-4">
                             </div>
                         </div>
 
                         <div class="form-row">
                             <div class="col-lg-7">
+                                <i class="fa fa-lock" style="font-size:30px"></i>
                                 <input type="password" placeholder="Password" class="form-control my-3 p-4">
                             </div>
                         </div>
