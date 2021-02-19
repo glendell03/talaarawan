@@ -1,5 +1,5 @@
-<?php include "../server/createNote.php" ?>
-<?php include "../server/readNote.php" ?>
+<?php include "../server/note/create.php" ?>
+<?php include "../server/note/read.php" ?>
 
 <?php
 session_start();
@@ -78,6 +78,10 @@ if ($_SESSION["loggedin"] === null) {
                 <div class="note">
                     <h1><?php echo $row['title'] ?></h1>
                     <p><?php echo $row['description'] ?></p>
+                </div>
+
+                <div class="cta">
+                    <button><a href="./pages/update.php?id=<?= $row["note_id"] ?>">Update</a></button>
                 </div>
             </div>
         <?php
