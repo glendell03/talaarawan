@@ -1,4 +1,4 @@
-<?php include "../../server/auth/register.php" ?>
+<?php include "../../server/register.php" ?>
 
 <!DOCTYPE html>
 <html lang="en">

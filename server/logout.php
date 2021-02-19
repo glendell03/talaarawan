@@ -8,5 +8,5 @@ $_SESSION = array();
 session_destroy();
 
 
-header("location: ../../public/auth/login.php");
+header("location: ../public/auth/login.php");
 exit;

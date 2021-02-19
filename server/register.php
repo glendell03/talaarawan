@@ -1,6 +1,6 @@
 <?php
 
-require_once "../config.php";
+require_once "config.php";
 
 $email = $password = $confirm_password = "";
 $email_err = $password_err = $confirm_password_err = "";

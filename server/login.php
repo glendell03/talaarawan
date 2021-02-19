@@ -5,7 +5,7 @@ if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
     header("location: ../index.php");
     exit;
 }
-require_once "../config.php";
+require_once "config.php";
 
 $email = $password = "";
 $email_err = $password_err = "";

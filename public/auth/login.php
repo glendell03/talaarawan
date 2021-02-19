@@ -1,4 +1,4 @@
-<?php include "../../server/auth/login.php" ?>
+<?php include "../../server/login.php" ?>
 <!DOCTYPE html>
 <html lang="en">
 

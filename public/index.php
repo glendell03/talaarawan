@@ -1,5 +1,5 @@
-<?php include "../server/note/create.php" ?>
-<?php include "../server/note/read.php" ?>
+<?php include "../server/createNote.php" ?>
+<?php include "../server/readNote.php" ?>
 
 <?php
 session_start();
