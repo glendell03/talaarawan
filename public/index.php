@@ -21,6 +21,7 @@ if ($_SESSION["loggedin"] === false) {
 </head>
 
 <body>
+<button><a href="../server/logout.php">Signout</a></button>
     <!-- DIARY -->
 
     <!-- <div class="note-modal">
