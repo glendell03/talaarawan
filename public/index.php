@@ -1,5 +1,6 @@
 <?php include "../server/createNote.php" ?>
 <?php include "../server/readNote.php" ?>
+<?php include "../server/deleteNote.php" ?>
 
 <?php
 session_start();
@@ -17,20 +18,14 @@ if ($_SESSION["loggedin"] === null) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Talaarawan</title>
-    <link rel="stylesheet" href="./css/index.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
-    <button><a href="../server/auth/logout.php">Signout</a></button>
+    <button><a href="../server/logout.php">Signout</a></button>
     <!-- DIARY -->
 
-    <!-- <div class="note-modal">
-        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-            <input type="text" name="title" value="<?php echo $title; ?> " placeholder="title">
-            <textarea type="text" name="description" value="<?php echo $description ?>" placeholder="description"></textarea>
-            <button type="submit">submit</button>
-        </form>
-    </div> -->
 
     <!-- SEARCH -->
     <div class="searchbar">
@@ -63,34 +58,51 @@ if ($_SESSION["loggedin"] === null) {
         </div>
     </div>
 
+
+
     <!-- NOTE -->
     <div class="note-wrapper">
-        <?php while ($row = mysqli_fetch_array($query)) {
-        ?>
-            <div class="note-container">
-                <div class="date">
+        <?php if ($result = mysqli_query($link, $sql)) { ?>
+            <?php if (mysqli_num_rows($result) > 0) { ?>
+                <?php while ($row = mysqli_fetch_array($result)) {
+                ?>
+                    <div class="note-container">
+                        <div class="date">
 
-                    <?php echo date('M', strtotime($row['created_at'])); ?>
+                            <?php echo date('M', strtotime($row['created_at'])); ?>
 
-                    <?php echo date('d', strtotime($row['created_at'])); ?>
+                            <?php echo date('d', strtotime($row['created_at'])); ?>
 
-                </div>
-                <div class="note">
-                    <h1><?php echo $row['title'] ?></h1>
-                    <p><?php echo $row['description'] ?></p>
-                </div>
+                        </div>
+                        <div class="note">
+                            <h1><?php echo $row['title'] ?></h1>
+                            <p><?php echo $row['description'] ?></p>
+                        </div>
 
-                <div class="cta">
-                    <button><a href="./pages/update.php?id=<?php echo $row["note_id"] ?>">Update</a></button>
-                </div>
-            </div>
+                        <div class="cta">
+                            <div class="edit">
+                                <a href="./pages/update.php?id=<?= $row['note_id'] ?>"><i class="ri-edit-line ri-fw"></i></a>
+                            </div>
+                            <div class="remove">
+                                <a href="../server/deleteNote.php?id=<?= $row['note_id'] ?>"><i class="ri-delete-bin-line"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                <?php
+                }
+                ?>
+            <?php
+            }
+            ?>
         <?php
         }
         ?>
     </div>
+
     <?php
     mysqli_close($link); // Closing Connection with Server
     ?>
 </body>
+<script src="./js/index.js"></script>
 
 </html>

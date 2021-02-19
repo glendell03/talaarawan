@@ -49,7 +49,7 @@ if (isset($_POST['id']) && !empty($_POST['id'])) {
     if (isset($_GET['id']) && !empty(trim($_GET['id']))) {
         $id = trim($_GET['id']);
 
-        $sql = "SELECT * FROM note WHERE id = ?";
+        $sql = "SELECT * FROM note WHERE note_id = ?";
         if ($stmt = mysqli_prepare($link, $sql)) {
             mysqli_stmt_bind_param($stmt, "i", $param_id);
 

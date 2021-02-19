@@ -1,3 +1,5 @@
+<?php include "../../server/register.php" ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -134,7 +136,6 @@
             .other {
                 line-height: 20px;
                 margin-left: -25px;
-                align: left;
             }
 
             #checkbox {
@@ -187,7 +188,7 @@
             <div class="container">
                 <div class="row no-gutters">
                     <div class="col-lg-5">
-                        <img src="./signup1.png" class="img-fluid" alt="">
+                        <img src="../img/signup1.png" class="img-fluid" alt="">
                     </div>
                     <div class="col-lg-7 px-5 pt-5">
                         <div class="torq">
@@ -195,18 +196,24 @@
                             </h3>
                             <h3 class="nye">ACCOUNT </h3>
 
-                            <form>
+                            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
                                 <div class="form-row">
                                     <div class="col-lg-7">
                                         <i class="fa fa-envelope" style="font-size:24px"></i>
-                                        <input type="email" placeholder="Email" class="form-control my-3 p-4">
+                                        <input type="email" placeholder="Email" name="email" value="<?php echo $email; ?>" class="form-control my-3 p-4">
                                     </div>
                                 </div>
 
                                 <div class="form-row">
                                     <div class="col-lg-7">
                                         <i class="fa fa-lock" style="font-size:30px"></i>
-                                        <input type="password" placeholder="Password" class="form-control my-3 p-4">
+                                        <input type="password" placeholder="Password" name="password" value="<?php echo $password; ?>" class="form-control my-3 p-4">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="col-lg-7">
+                                        <i class="fa fa-lock" style="font-size:30px"></i>
+                                        <input type="password" placeholder="Confirm Password" name="confirm_password" value="<?php echo $confirm_password; ?>" class="form-control my-3 p-4">
                                     </div>
                                 </div>
                                 <div class="form-row">
