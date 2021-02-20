@@ -1,5 +1,4 @@
 <?php include "../server/createNote.php" ?>
-<?php include "../server/readNote.php" ?>
 <?php include "../server/deleteNote.php" ?>
 
 <?php
@@ -25,7 +24,6 @@ if ($_SESSION["loggedin"] === null) {
 <body>
     <button><a href="../server/logout.php">Signout</a></button>
     <!-- DIARY -->
-
 
     <!-- SEARCH -->
     <div class="searchbar">
@@ -59,13 +57,24 @@ if ($_SESSION["loggedin"] === null) {
     </div>
 
 
+    <div class="note-modal">
+        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+            <input type="text" name="title" value="<?php echo $title ?>" placeholder="title">
+            <textarea id="textArea" type="text" name="description"><?php echo $description ?></textarea>
+            <input type="hidden" name="id" value="<?php echo $id = $_SESSION['id']; ?>" />
+            <button type="submit">submit</button>
+        </form>
+    </div>
+
 
     <!-- NOTE -->
     <div class="note-wrapper">
-        <?php if ($result = mysqli_query($link, $sql)) { ?>
-            <?php if (mysqli_num_rows($result) > 0) { ?>
-                <?php while ($row = mysqli_fetch_array($result)) {
-                ?>
+        <?php
+        $sql = "SELECT * FROM notes WHERE user_id=$id";
+        if ($result = mysqli_query($link, $sql)) {
+            if (mysqli_num_rows($result) > 0) {
+                while ($row = mysqli_fetch_array($result)) {
+        ?>
                     <div class="note-container">
                         <div class="date">
 
@@ -92,6 +101,8 @@ if ($_SESSION["loggedin"] === null) {
                 }
                 ?>
             <?php
+            } else {
+                echo "No log";
             }
             ?>
         <?php
@@ -99,9 +110,6 @@ if ($_SESSION["loggedin"] === null) {
         ?>
     </div>
 
-    <?php
-    mysqli_close($link); // Closing Connection with Server
-    ?>
 </body>
 <script src="./js/index.js"></script>
 

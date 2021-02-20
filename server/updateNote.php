@@ -25,7 +25,7 @@ if (isset($_POST['id']) && !empty($_POST['id'])) {
 
     if (empty($title_err) && empty($description_err)) {
 
-        $sql = "UPDATE note SET title=?, description=? WHERE note_id=?";
+        $sql = "UPDATE notes SET title=?, description=? WHERE note_id=?";
 
         if ($stmt = mysqli_prepare($link, $sql)) {
             mysqli_stmt_bind_param($stmt, "ssi", $param_title, $param_description, $param_id);
@@ -49,7 +49,7 @@ if (isset($_POST['id']) && !empty($_POST['id'])) {
     if (isset($_GET['id']) && !empty(trim($_GET['id']))) {
         $id = trim($_GET['id']);
 
-        $sql = "SELECT * FROM note WHERE note_id = ?";
+        $sql = "SELECT * FROM notes WHERE note_id = ?";
         if ($stmt = mysqli_prepare($link, $sql)) {
             mysqli_stmt_bind_param($stmt, "i", $param_id);
 

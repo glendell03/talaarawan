@@ -12,7 +12,7 @@ if (isset($_GET['id'])) {
 
     $id = validate($_GET['id']);
 
-    $sql = "DELETE FROM note
+    $sql = "DELETE FROM notes
              WHERE note_id=$id";
     $result = mysqli_query($link, $sql);
     if ($result) {

@@ -7,4 +7,4 @@ if (mysqli_connect_errno()) {
 }
 
 
-$sql = "SELECT * FROM note";
+

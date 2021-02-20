@@ -13,12 +13,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $description = $input_description;
 
 
-    $sql = "INSERT INTO note (title, description) VALUES (?,?)";
+    $sql = "INSERT INTO notes (title, description, user_id) VALUES (?,?,?)";
     if ($stmt = mysqli_prepare($link, $sql)) {
-        mysqli_stmt_bind_param($stmt, "ss", $param_title, $param_description);
+        mysqli_stmt_bind_param($stmt, "sss", $param_title, $param_description, $param_user);
 
         $param_title = $title;
         $param_description = $description;
+        $param_user = $_POST['id'];
+
 
         if (mysqli_stmt_execute($stmt)) {
             header("location: ../public/index.php");

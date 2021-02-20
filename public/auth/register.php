@@ -21,8 +21,7 @@
 
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
         <title>Login</title>
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap');
@@ -101,6 +100,7 @@
                 height: 52px;
                 width: 466px;
                 border-color: black;
+                padding-left: 60px;
             }
 
             a {
@@ -110,27 +110,6 @@
 
             section {
                 padding-top: 82px;
-            }
-
-            .logo1 {
-                margin-top: -20px;
-            }
-
-            i {
-                padding: 30px;
-                position: absolute;
-                margin-top: -1px;
-                padding-left: 20px;
-                left: 20px;
-            }
-
-            input::placeholder {
-                padding-left: 60px;
-            }
-
-            input {
-                padding-left: 60px;
-
             }
 
             .other {
@@ -156,18 +135,19 @@
                 width: 515px;
             }
 
-            p.logo {
+            .logo-text {
                 font-family: 'Pacifico', cursive;
-                position: absolute;
-                margin-left: 95px;
-                margin-top: -35px;
             }
 
-            h3.nye {
-                padding-left: 49px;
-                font-family: 'Nunito', sans-serif;
-                margin-top: -57px;
-                margin-left: 300px;
+            .input-wrapper {
+                display: flex;
+                align-items: center;
+                position: relative;
+            }
+
+            .input-wrapper i {
+                padding-left: 20px;
+                position: absolute;
             }
         </style>
     </head>
@@ -192,38 +172,35 @@
                     </div>
                     <div class="col-lg-7 px-5 pt-5">
                         <div class="torq">
-                            <h3 class="logo font-weight-bold py-3">CREATE A <p class="logo">Talaarawan</p>
-                            </h3>
-                            <h3 class="nye">ACCOUNT </h3>
-
+                            <h3 class="logo font-weight-bold py-3">CREATE A <span class="logo-text">Talaarawan</span> ACCOUNT</h3>
                             <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
                                 <div class="form-row">
-                                    <div class="col-lg-7">
-                                        <i class="fa fa-envelope" style="font-size:24px"></i>
-                                        <input type="email" placeholder="Email" name="email" value="<?php echo $email; ?>" class="form-control my-3 p-4">
+                                    <div class="input-wrapper my-3">
+                                        <i class="ri-mail-line ri-lg"></i>
+                                        <input type="email" placeholder="Email" name="email" value="<?php echo $email; ?>" class="form-control">
                                     </div>
                                 </div>
 
                                 <div class="form-row">
-                                    <div class="col-lg-7">
-                                        <i class="fa fa-lock" style="font-size:30px"></i>
-                                        <input type="password" placeholder="Password" name="password" value="<?php echo $password; ?>" class="form-control my-3 p-4">
+                                    <div class="input-wrapper my-3">
+                                        <i class="ri-lock-line ri-lg"></i>
+                                        <input type="password" placeholder="Password" name="password" value="<?php echo $password; ?>" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="input-wrapper my-3">
+                                        <i class="ri-lock-line ri-lg"></i>
+                                        <input type="password" placeholder="Confirm Password" name="confirm_password" value="<?php echo $confirm_password; ?>" class="form-control">
                                     </div>
                                 </div>
                                 <div class="form-row">
                                     <div class="col-lg-7">
-                                        <i class="fa fa-lock" style="font-size:30px"></i>
-                                        <input type="password" placeholder="Confirm Password" name="confirm_password" value="<?php echo $confirm_password; ?>" class="form-control my-3 p-4">
-                                    </div>
-                                </div>
-                                <div class="form-row">
-                                    <div class="col-lg-7">
-                                        <button type="button" class="btn1 mt-3 mb-5" a href="#">SIGNUP</button></a>
+                                        <button type="submit" class="btn1 mt-3 mb-5">SIGNUP</button>
                                     </div>
                                 </div>
                                 <div class="other">
                                     <label>
-                                        <input type="checkbox" id="checkbox" name="" value="">
+                                        <input type="checkbox" id="checkbox" equired>
                                         By signing up, you confirm that you are at least 13 years old, and have read and accepted our
                                         Terms and Conditions, Privacy Policy and Terms of Use.
                                     </label>
