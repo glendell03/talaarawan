@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
 
 * {
   padding: 0;
@@ -7,14 +8,134 @@
   font-family: "Nunito", sans-serif;
 }
 
+section {
+  margin: 0 10rem;
+}
+
+nav {
+  height: 80px;
+  background: #87d1b8;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  font-family: "Pacifico", cursive;
+  font-size: 45px;
+  color: #f5f4f4;
+  margin: 0 10rem;
+}
+
+.header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin: 3rem 0;
+}
+.sign-out {
+  margin: 0 10rem;
+}
+
+.header {
+  font-family: "Pacifico", cursive;
+  font-size: 60px;
+  color: #00303f;
+}
+
+.sub-header {
+  font-family: "Nunito", sans-serif;
+  color: black;
+  font-size: 30px;
+}
+/* SEARCH */
+.searchbar-container {
+  display: flex;
+  align-items: center;
+}
+
+.searchbar {
+  border: 2px solid black;
+  border-radius: 5px;
+  display: flex;
+  height: 2.5rem;
+  width: fit-content;
+  align-items: center;
+}
+
+.ri-search-line {
+  padding: 0.5rem;
+}
+
+.searchbar > input {
+  border: none;
+  outline: none;
+  padding: 0.2rem;
+  margin: 0 0.2rem;
+}
+
+.searchbar .select-wrapper {
+  display: flex;
+}
+
+.searchbar .select-wrapper select {
+  border: none;
+  outline: none;
+  padding: 0.2rem;
+  margin: 0 0.2rem;
+}
+.vLine {
+  border-left: 2px solid black;
+  height: 100%;
+}
+/* END SEARCH */
+
+nav ul {
+  float: right;
+  margin-right: 25px;
+}
+
+nav ul li {
+  display: inline-block;
+  line-height: 80 px;
+  margin: 0, 15 px;
+}
+
+nav ul li a {
+  position: relative;
+  top: 30px;
+  color: #f5f4f4;
+  font-size: 18px;
+  padding: 5px, 0;
+  text-transform: uppercase;
+  border: 10px solid;
+  border-radius: 5px;
+  border-color: #00303f;
+  background-color: #00303f;
+}
+
+nav ul li a:before {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 100%;
+  background: #f5f4f4;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s linear;
+}
+
+nav ul li a:hover:before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
 /* NOTE */
 .note-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-left: 10rem;
-  margin-right: 10rem;
 }
 
 .note-container {
@@ -62,38 +183,6 @@
   padding: 0 0.5rem;
 }
 /* END NOTE */
-
-/* SEARCH */
-.searchbar {
-  border: 2px solid black;
-  border-radius: 5px;
-  display: flex;
-  height: 2.5rem;
-  width: fit-content;
-}
-
-.searchbar > input {
-  border: none;
-  outline: none;
-  padding: 0.2rem;
-  margin: 0 0.2rem;
-}
-
-.searchbar .select-wrapper {
-  display: flex;
-}
-
-.searchbar .select-wrapper select {
-  border: none;
-  outline: none;
-  padding: 0.2rem;
-  margin: 0 0.2rem;
-}
-.vLine {
-  border-left: 2px solid black;
-  height: 100%;
-}
-/* END SEARCH */
 
 /* EDIT */
 .cta .edit {
