@@ -29,6 +29,7 @@ nav {
 .header-wrapper {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin: 3rem 0;
 }
 .sign-out {
@@ -46,51 +47,9 @@ nav {
   color: black;
   font-size: 30px;
 }
-/* SEARCH */
-.searchbar-container {
-  display: flex;
-  align-items: center;
-}
-
-.searchbar {
-  border: 2px solid black;
-  border-radius: 5px;
-  display: flex;
-  height: 2.5rem;
-  width: fit-content;
-  align-items: center;
-}
-
-.ri-search-line {
-  padding: 0.5rem;
-}
-
-.searchbar > input {
-  border: none;
-  outline: none;
-  padding: 0.2rem;
-  margin: 0 0.2rem;
-}
-
-.searchbar .select-wrapper {
-  display: flex;
-}
-
-.searchbar .select-wrapper select {
-  border: none;
-  outline: none;
-  padding: 0.2rem;
-  margin: 0 0.2rem;
-}
-.vLine {
-  border-left: 2px solid black;
-  height: 100%;
-}
-/* END SEARCH */
 
 nav ul {
   float: right;
-  margin-right: 25px;
 }
 
 nav ul li {
@@ -128,70 +87,4 @@ nav ul li a:before {
 nav ul li a:hover:before {
   transform: scaleX(1);
   transform-origin: left;
-}
-
-/* NOTE */
-.note-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-.note-container {
-  display: flex;
-  flex-direction: row;
-  background-color: #cdac81;
-  width: 100%;
-  height: 100%;
-  margin: 1rem;
-  color: white;
-  border-radius: 5px;
-
-  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
-    0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
-    0 30px 20px rgba(0, 0, 0, 0.086);
-}
-
-.date {
-  height: 10rem;
-  width: 10rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: bold;
-}
-
-.note {
-  flex: 1;
-  padding: 1rem;
-}
-
-.note h1 {
-  padding: 0 0.5rem;
-  margin-bottom: 1rem;
-  line-height: 150%;
-}
-
-.note h1::after {
-  content: " ";
-  display: block;
-  border: 1px solid white;
-}
-
-.note p {
-  padding: 0 0.5rem;
-}
-/* END NOTE */
-
-/* EDIT */
-.cta .edit {
-  padding: 1rem;
-}
-.cta .remove {
-  padding: 1rem;
-}
-.cta a {
-  color: white;
-  font-size: 20px;
 }

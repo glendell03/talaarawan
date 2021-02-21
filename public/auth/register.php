@@ -86,6 +86,7 @@
 
             .form-row {
                 padding-left: 49px;
+                position: relative;
             }
 
             p {
@@ -112,29 +113,6 @@
                 padding-top: 82px;
             }
 
-            .other {
-                line-height: 20px;
-                margin-left: -25px;
-            }
-
-            #checkbox {
-                margin-left: 60px;
-                padding-bottom: 256px;
-                position: relative;
-                margin-right: 20px;
-            }
-
-            label {
-                display: flex;
-                align-items: center;
-                position: absolute;
-                margin-left: 20px;
-                color: #00303F;
-                font-family: 'Nunito', sans-serif;
-                word-wrap: break-word;
-                width: 515px;
-            }
-
             .logo-text {
                 font-family: 'Pacifico', cursive;
             }
@@ -148,6 +126,12 @@
             .input-wrapper i {
                 padding-left: 20px;
                 position: absolute;
+            }
+
+            .error {
+                position: absolute;
+                color: red;
+                bottom: -5px;
             }
         </style>
     </head>
@@ -176,36 +160,39 @@
                             <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
                                 <div class="form-row">
                                     <div class="input-wrapper my-3">
+                                        <i class="ri-user-line ri-lg"></i>
+                                        <input type="text" placeholder="name" name="name" value="<?php echo $name; ?>" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="input-wrapper my-3">
                                         <i class="ri-mail-line ri-lg"></i>
                                         <input type="email" placeholder="Email" name="email" value="<?php echo $email; ?>" class="form-control">
                                     </div>
+                                    <span class="error"><?php echo "$email_err"; ?></span>
                                 </div>
-
                                 <div class="form-row">
                                     <div class="input-wrapper my-3">
                                         <i class="ri-lock-line ri-lg"></i>
                                         <input type="password" placeholder="Password" name="password" value="<?php echo $password; ?>" class="form-control">
                                     </div>
+                                    <span class="error"><?php echo "$password_err"; ?></span>
                                 </div>
                                 <div class="form-row">
                                     <div class="input-wrapper my-3">
                                         <i class="ri-lock-line ri-lg"></i>
                                         <input type="password" placeholder="Confirm Password" name="confirm_password" value="<?php echo $confirm_password; ?>" class="form-control">
                                     </div>
+                                    <span class="error"><?php echo "$confirm_password_err"; ?></span>
                                 </div>
                                 <div class="form-row">
                                     <div class="col-lg-7">
                                         <button type="submit" class="btn1 mt-3 mb-5">SIGNUP</button>
                                     </div>
                                 </div>
-                                <div class="other">
-                                    <label>
-                                        <input type="checkbox" id="checkbox" equired>
-                                        By signing up, you confirm that you are at least 13 years old, and have read and accepted our
-                                        Terms and Conditions, Privacy Policy and Terms of Use.
-                                    </label>
-                                </div>
                         </div>
+                        Already have an account?
+                        <a href="login.php"> Click here to login</a>
                         </form>
                     </div>
                 </div>

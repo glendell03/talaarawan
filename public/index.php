@@ -6,6 +6,9 @@ session_start();
 if ($_SESSION["loggedin"] === null) {
     header("location: auth/login.php");
     exit;
+} else {
+    $id = $_SESSION['id'];
+    $name = $_SESSION['name'];
 }
 ?>
 
@@ -15,10 +18,13 @@ if ($_SESSION["loggedin"] === null) {
 <he <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Talaarawan</title>
-    <link rel="icon" href="%PUBLIC_URL%/logo_1.png" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
-
+    <link rel="stylesheet" href="./css/search.css">
+    <link rel="stylesheet" href="./css/note.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="./js/search1.js"></script>
     </head>
 
     <body>
@@ -35,16 +41,23 @@ if ($_SESSION["loggedin"] === null) {
             <div class="header-wrapper">
 
                 <div class="header-container">
-                    <h2 class="header">Welcome!</h2>
+                    <h2 class="header">Welcome! <?php echo $name ?> </h2>
                     <h3 class="sub-header">How's your day today?</h3>
                 </div>
 
+                <button onclick="showHide()" class="search-button">
+                    <i class="ri-search-line"></i>
+                    <p>SEARCH</p>
+                </button>
+
                 <!-- SEARCH -->
-                <div class="searchbar-container">
+
+                <div scroll="no" class="searchbar-container" id="show" style="display: none;">
+                    <button class="close" onclick="!showHide()"><i class="ri-close-circle-line"></i></button>
                     <div class="searchbar">
                         <i class="ri-search-line"></i>
 
-                        <input type="search" name="search" id="search" placeholder="Search notes">
+                        <input type="search" autocomplete="false" name="search" id="search" placeholder="Search notes">
 
                         <div class="select-wrapper">
                             <div class="vLine"></div>
@@ -71,18 +84,22 @@ if ($_SESSION["loggedin"] === null) {
                             </select>
                         </div>
                     </div>
+                    <div class="result-wrapper">
+                        <div class="result" id="result">
+                        </div>
+                    </div>
                 </div>
             </div>
 
 
-            <!-- <div class="note-modal">
-            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-                <input type="text" name="title" value="<?php echo $title ?>" placeholder="title">
-                <textarea id="textArea" type="text" name="description"><?php echo $description ?></textarea>
-                <input type="hidden" name="id" value="<?php echo $id = $_SESSION['id']; ?>" />
-                <button type="submit">submit</button>
-            </form>
-        </div> -->
+            <div class="note-modal">
+                <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+                    <input type="text" name="title" value="<?php echo $title ?>" placeholder="title">
+                    <textarea id="textArea" type="text" name="description"><?php echo $description ?></textarea>
+                    <input type="hidden" name="id" value="<?php echo $id ?>" />
+                    <button type="submit">submit</button>
+                </form>
+            </div>
 
 
             <!-- NOTE -->
@@ -120,7 +137,7 @@ if ($_SESSION["loggedin"] === null) {
                         ?>
                     <?php
                     } else {
-                        echo "No log";
+                        echo "<img src='./img/addnote.svg' />";
                     }
                     ?>
                 <?php
@@ -128,8 +145,6 @@ if ($_SESSION["loggedin"] === null) {
                 ?>
             </div>
         </section>
-
     </body>
-    <script src="./js/index.js"></script>
 
 </html>

@@ -1,0 +1,65 @@
+/* NOTE */
+.note-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.note-container {
+  display: flex;
+  flex-direction: row;
+  background-color: #cdac81;
+  width: 100%;
+  height: 10rem;
+  margin: 1rem;
+  color: white;
+  border-radius: 5px;
+
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 30px 20px rgba(0, 0, 0, 0.086);
+}
+
+.date {
+  height: 10rem;
+  width: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+.note {
+  flex: 1;
+  padding: 1rem;
+}
+
+.note h1 {
+  padding: 0 0.5rem;
+  margin-bottom: 1rem;
+  line-height: 150%;
+}
+
+.note h1::after {
+  content: " ";
+  display: block;
+  border: 1px solid white;
+}
+
+.note p {
+  padding: 0 0.5rem;
+}
+/* END NOTE */
+
+/* EDIT */
+.cta .edit {
+  padding: 1rem;
+}
+.cta .remove {
+  padding: 1rem;
+}
+.cta a {
+  color: white;
+  font-size: 20px;
+}

@@ -84,6 +84,7 @@
 
             .form-row {
                 padding-left: 49px;
+                position: relative;
             }
 
             p {
@@ -123,6 +124,12 @@
                 padding-left: 20px;
                 position: absolute;
             }
+
+            .error {
+                position: absolute;
+                color: red;
+                bottom: -5px;
+            }
         </style>
     </head>
 
@@ -144,6 +151,7 @@
                                         <i class="ri-mail-line ri-lg"></i>
                                         <input type="email" placeholder="Email" name="email" value="<?php echo $email; ?>" class="form-control">
                                     </div>
+                                    <span class="error"><?php echo "$email_err"; ?></span>
                                 </div>
 
                                 <div class="form-row">
@@ -151,6 +159,7 @@
                                         <i class="ri-lock-line ri-lg"></i>
                                         <input type="password" placeholder="Password" name="password" value="<?php echo $password; ?>" class="form-control">
                                     </div>
+                                    <span class="error"><?php echo "$password_err"; ?></span>
                                 </div>
                                 <div class="form-row">
                                     <div class="col-lg-7">

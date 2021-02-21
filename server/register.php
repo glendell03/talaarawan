@@ -2,10 +2,35 @@
 
 require_once "config.php";
 
-$email = $password = $confirm_password = "";
-$email_err = $password_err = $confirm_password_err = "";
+$name = $email = $password = $confirm_password = "";
+$name_err = $email_err = $password_err = $confirm_password_err = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+    if (empty(trim($_POST['name']))) {
+        $name_err = "Please enter a name";
+    } else {
+        $sql = "SELECT user_id FROM users WHERE name = ?";
+
+        if ($stmt = mysqli_prepare($link, $sql)) {
+            mysqli_stmt_bind_param($stmt, "s", $param_name);
+
+            $param_name = trim($_POST['name']);
+
+            if (mysqli_stmt_execute($stmt)) {
+                mysqli_stmt_store_result($stmt);
+
+                if (mysqli_stmt_num_rows($stmt) == 1) {
+                    $name_err = "This name is already taken.";
+                } else {
+                    $name = trim($_POST["name"]);
+                }
+            } else {
+                echo "Oops! Something went wrong. Please try again late.";
+            }
+            mysqli_stmt_close($stmt);
+        }
+    }
 
     if (empty(trim($_POST['email']))) {
         $email_err = "Please enter a email";
@@ -49,12 +74,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
 
-    if (empty($email_err) && empty($password_err) && empty($confirm_password_err)) {
-        $sql = "INSERT INTO users (email, password) VALUES (?, ?)";
+    if (empty($name_err) && empty($email_err) && empty($password_err) && empty($confirm_password_err)) {
+        $sql = "INSERT INTO users (name, email, password) VALUES (?, ?, ?)";
 
         if ($stmt = mysqli_prepare($link, $sql)) {
-            mysqli_stmt_bind_param($stmt, "ss", $param_email, $param_password);
+            mysqli_stmt_bind_param($stmt, "sss", $param_name, $param_email, $param_password);
 
+            $param_name = $name;
             $param_email = $email;
             $param_password = password_hash($password, PASSWORD_DEFAULT);
 
