@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-family: "Pacifico", cursive;
+  margin: 1rem;
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem 0;
+}
+
+.update-btn-container {
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: stretch;
+}
+
+.left-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.3rem;
+  margin-right: 1rem;
+  height: inherit;
+}
+
+.update-btn {
+  background-color: #00303f;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: fit-content;
+  color: white;
+  font-size: 1rem;
+  border-radius: 5px;
+  padding: 0.5rem;
+  transition: 0.3s ease-in-out;
+}
+
+.update-btn:hover {
+  background-color: white;
+  color: #00303f;
+  border: 2px solid #00303f;
+}
+
+.update-input {
+  height: 2rem;
+  width: 30rem;
+  padding: 0.5rem;
+}
+
+.update-tarea {
+  padding: 1rem;
+  height: 20rem;
+  margin: 1rem 0;
+}
+
+.note-modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  width: 40rem;
+  border-radius: 5px;
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 30px 20px rgba(0, 0, 0, 0.086);
+}

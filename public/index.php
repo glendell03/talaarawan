@@ -23,7 +23,7 @@ if ($_SESSION["loggedin"] === null) {
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/searchs.css">
     <link rel="stylesheet" href="./css/notes.css">
-    <link rel="stylesheet" href="./css/new.css">
+    <link rel="stylesheet" href="./css/newnote.css">
     <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <script src="./js/modal.js"></script>
     <script src="./js/search1.js"></script>
@@ -107,12 +107,14 @@ if ($_SESSION["loggedin"] === null) {
                         <input type="date" class="Datedesign" id="myDate" />
                         <textarea type="text" class="input-field" placeholder="Start your story here :)" style="height: 650px" name="description"><?php echo $description ?></textarea>
                         <input type="hidden" name="id" value="<?php echo $id ?>" />
-                        <button type="submit" class="submit-btn">
-                            <i class="ri-save-line"></i>Save and close
-                        </button>
-                        <button type="button" onclick="!modal()" class="cancel-btn">
-                            <i class="ri-close-circle-line"></i>Discard
-                        </button>
+                        <div class="button-wrapper">
+                            <button type="submit" class="submit-btn">
+                                <i class="ri-save-line"></i>Save and close
+                            </button>
+                            <button type="button" onclick="!modal()" class="cancel-btn">
+                                <i class="ri-close-circle-line"></i>Discard
+                            </button>
+                        </div>
                     </form>
                 </div>
             </div>
