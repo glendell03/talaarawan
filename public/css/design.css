@@ -1,159 +1,140 @@
-*
-{
-	margin: 0;
-	padding: 0;
-	font-family: sans-serif;
+.create-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
 }
 
-.background{
-
-	height: 100%;
-	width: 100%;
-	background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)),url(notebookdesign.jpg);
-	background-position: center;
-	background-size:cover;
-	
+.background {
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+    url(../img/notebookdesign.jpg);
+  background-position: center;
+  background-size: cover;
 }
 
-
-.input-group{
-	 width: 68%;
+.input-group {
+  width: 68%;
   height: 150px;
   padding: 12px 20px;
   box-sizing: border-box;
   border-radius: 4px;
   position: relative;
-  left:18%;
- 
+  left: 18%;
+
   resize: none;
- 
 }
-	textarea[type=text]	{
-    width:100%;
-    border:2px solid #aaa;
-    border-radius:4px;
-    margin:8px 0;
-    outline:none;
-    padding:10px;
-    box-sizing:border-box;
-    transition:3s;
-    background-color: transparent;
-    font-size: 25px;
-  	 }
-  
-  textarea[type=text] {
-//DESIGN//
-    border-color:dodgerBlue;
-    box-shadow:0 0 15px 0 dodgerBlue;
-  }
+textarea[type="text"] {
+  width: 100%;
+  border: 2px solid #aaa;
+  border-radius: 4px;
+  margin: 8px 0;
+  outline: none;
+  padding: 10px;
+  box-sizing: border-box;
+  transition: 3s;
+  background-color: transparent;
+  font-size: 25px;
+}
 
+textarea[type="text"] {
+  border-color: dodgerBlue;
+  box-shadow: 0 0 15px 0 dodgerBlue;
+}
 
-
-
-
-	input[type=text]	{
-    width:60%;
-    border:2px solid #aaa;
-    border-radius:4px;
-    margin:8px 0;
-    outline:none;
-    padding:10px;
-    box-sizing:border-box;
-    transition:1s;
-    background-color: transparent;
-    font-size: 25px;
-    border-color: dodgerBlue;
-  		box-shadow:0 0 15px 0 dodgerBlue; 		  
+input[type="text"] {
+  width: 60%;
+  border: 2px solid #aaa;
+  border-radius: 4px;
+  margin: 8px 0;
+  outline: none;
+  padding: 10px;
+  box-sizing: border-box;
+  transition: 1s;
+  background-color: transparent;
+  font-size: 25px;
+  border-color: dodgerBlue;
+  box-shadow: 0 0 15px 0 dodgerBlue;
   font-family: arial;
-  }
+}
 
-.Datedesign{
- 
- 
+.Datedesign {
   padding: 12px 20px;
   box-sizing: border-box;
   border-radius: 4px;
-  top:0;
+  top: 0;
   position: absolute;
-  
- 
-
-
 }
-input[type=date]	{
-    width:20%;
-    border:2px solid #aaa;
-    border-radius:2px;
-    margin:8px 0;
-    outline:none;
-    padding:8px;
-    box-sizing:border-box;
-    transition:1.5s;
-    background-color: transparent;
-    font-size: 30px;
-  	right: 20px;
-    top:2px;
-  	border-color: green;
-  		box-shadow:0 0 15px 0 lightgreen;
-    
-  }
-
-
-.submit-btn{
-	
-	padding: 10px 20px;
-	cursor: pointer;
-	display: block;
-	margin:auto;
-	background: linear-gradient(to right, #108fff,#F3e7e7,#10d3ff);
-	border:0;
-	outline:none;
-	border-radius: 30px;
-	font-size: 17px;
-	box-shadow:0 0 18px 0 lightgreen;
-	border-color: green;
-	border:2px solid #aaa;
-  left:42%;
-  top:20px; 
-  position: relative;
-  width: 200px;
+input[type="date"] {
+  width: 20%;
+  border: 2px solid #aaa;
+  border-radius: 2px;
+  margin: 8px 0;
+  outline: none;
+  padding: 8px;
+  box-sizing: border-box;
   transition: 1.5s;
- 
+  background-color: transparent;
+  font-size: 30px;
+  right: 20px;
+  top: 2px;
+  border-color: green;
+  box-shadow: 0 0 15px 0 lightgreen;
 }
 
-
-.submit-btn:hover{
-	background-color: #1038ff;
-	box-shadow: 0 5px #666;
-	border-radius: 20px;
-	 transform: translateY(4px);
-}
-
-.cancel-btn{
+.submit-btn {
   padding: 10px 20px;
   cursor: pointer;
   display: block;
-  margin:auto;
-  color:white;
-  background-color: #298FC0;
-  border:0;
-  outline:none;
+  margin: auto;
+  background: linear-gradient(to right, #108fff, #f3e7e7, #10d3ff);
+  border: 0;
+  outline: none;
   border-radius: 30px;
   font-size: 17px;
-  box-shadow:0 0 18px 0 lightgreen;
+  box-shadow: 0 0 18px 0 lightgreen;
   border-color: green;
-  border:2px solid #aaa;
-  left:25%;
-  top:-25px; 
+  border: 2px solid #aaa;
+  left: 42%;
+  top: 20px;
   position: relative;
   width: 200px;
   transition: 1.5s;
-
-
 }
-.cancel-btn:hover{
-  color:black;
-  background-color: #8ECDEB;
+
+.submit-btn:hover {
+  background-color: #1038ff;
   box-shadow: 0 5px #666;
   border-radius: 20px;
-   transform: translateY(4px);
+  transform: translateY(4px);
+}
+
+.cancel-btn {
+  padding: 10px 20px;
+  cursor: pointer;
+  display: block;
+  margin: auto;
+  color: white;
+  background-color: #298fc0;
+  border: 0;
+  outline: none;
+  border-radius: 30px;
+  font-size: 17px;
+  box-shadow: 0 0 18px 0 lightgreen;
+  border-color: green;
+  border: 2px solid #aaa;
+  left: 25%;
+  top: -25px;
+  position: relative;
+  width: 200px;
+  transition: 1.5s;
+}
+.cancel-btn:hover {
+  color: black;
+  background-color: #8ecdeb;
+  box-shadow: 0 5px #666;
+  border-radius: 20px;
+  transform: translateY(4px);
+}
