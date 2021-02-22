@@ -1,18 +1,18 @@
 <?php
 include("config.php");
 
-if (isset($_GET["code"])) {
+if (!isset($_GET["code"])) {
     exit("Can't find page");
 }
 $code = $_GET["code"];
-$getEmailQuery = mysqli_query($link, " SELECT email FROM resetpass WHERE code='$code'");
+$getEmailQuery = mysqli_query($link, "SELECT email FROM resetpass WHERE code='$code'");
 if (mysqli_num_rows($getEmailQuery) == 0) {
     exit("Can't find page");
 }
 
 if (isset($_POST["password"])) {
     $pw = $_POST["password"];
-    $pw = md5($pw);
+    $pw = password_hash($pw, PASSWORD_DEFAULT);
 
     $row = mysqli_fetch_array($getEmailQuery);
     $email = $row["email"];
