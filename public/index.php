@@ -23,7 +23,7 @@ if ($_SESSION["loggedin"] === null) {
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/searchs.css">
     <link rel="stylesheet" href="./css/notes.css">
-    <link rel="stylesheet" href="./css/newnote.css">
+    <link rel="stylesheet" href="./css/new.css">
     <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <script src="./js/modal.js"></script>
     <script src="./js/search1.js"></script>
@@ -102,17 +102,19 @@ if ($_SESSION["loggedin"] === null) {
 
             <div class="create-wrapper" id="showModal" style="display: none;">
                 <div class="background">
-                    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST" class="input-group">
-                        <input type="text" class="titledesign" placeholder="Title" name="title" value="<?php echo $title ?>" />
-                        <input type="date" class="Datedesign" id="myDate" />
-                        <textarea type="text" class="input-field" placeholder="Start your story here :)" style="height: 650px" name="description"><?php echo $description ?></textarea>
+                    <form class="new-note-form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST" class="input-group">
+                        <div class="new-head">
+                            <input type="text" class="new-title" placeholder="Title" name="title" value="<?php echo $title ?>" />
+                            <input type="date" class="datedesign" id="myDate" />
+                        </div>
+                        <textarea type="text" class="new-text-area" placeholder="Start your story here :)" name="description"><?php echo $description ?></textarea>
                         <input type="hidden" name="id" value="<?php echo $id ?>" />
                         <div class="button-wrapper">
-                            <button type="submit" class="submit-btn">
-                                <i class="ri-save-line"></i>Save and close
-                            </button>
                             <button type="button" onclick="!modal()" class="cancel-btn">
                                 <i class="ri-close-circle-line"></i>Discard
+                            </button>
+                            <button type="submit" class="submit-btn">
+                                <i class="ri-save-line"></i>Save and close
                             </button>
                         </div>
                     </form>

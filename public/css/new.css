@@ -1,0 +1,104 @@
+.create-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.background {
+  height: 100%;
+  width: 100%;
+  background-image: url(../img/notebookdesign.jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.new-note-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 11rem;
+  padding-left: 3rem;
+}
+
+.new-head {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem 0;
+}
+
+.new-text-area {
+  width: 80%;
+  height: 25rem;
+  padding: 1rem;
+}
+
+.new-title {
+  height: 3rem;
+  width: 30rem;
+  padding: 0.5rem;
+}
+
+.datedesign {
+  height: 3rem;
+  padding: 0.5rem;
+}
+
+.button-wrapper {
+  height: 4rem;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.submit-btn {
+  background-color: #00303f;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 15rem;
+  height: fit-content;
+  color: white;
+  font-size: 1rem;
+  border-radius: 5px;
+  padding: 0.5rem;
+  transition: 0.3s ease-in-out;
+  margin-left: 1rem;
+}
+
+.submit-btn:hover {
+  background-color: white;
+  color: #00303f;
+  border: 2px solid #00303f;
+}
+
+.cancel-btn {
+  background-color: #00303f;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 15rem;
+  height: fit-content;
+  color: white;
+  font-size: 1rem;
+  border-radius: 5px;
+  padding: 0.5rem;
+  transition: 0.3s ease-in-out;
+  margin-right: 1rem;
+}
+
+.cancel-btn:hover {
+  background-color: white;
+  color: #00303f;
+  border: 2px solid #00303f;
+}

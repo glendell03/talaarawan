@@ -161,7 +161,7 @@
                                 <div class="form-row">
                                     <div class="input-wrapper my-3">
                                         <i class="ri-user-line ri-lg"></i>
-                                        <input type="text" placeholder="name" name="name" value="<?php echo $name; ?>" class="form-control">
+                                        <input type="text" placeholder="Name" name="name" value="<?php echo $name; ?>" class="form-control">
                                     </div>
                                 </div>
                                 <div class="form-row">
