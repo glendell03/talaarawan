@@ -1,4 +1,37 @@
 /* NOTE */
+.new-note-wrapper {
+  height: 3rem;
+  width: fit-content;
+}
+
+.new-note-btn {
+  background-color: #00303f;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: fit-content;
+  color: white;
+  font-size: 1rem;
+  border-radius: 5px;
+  padding: 0.5rem;
+  transition: 0.3s ease-in-out;
+}
+
+.new-note-btn:hover {
+  background-color: white;
+  color: #00303f;
+  border: 2px solid #00303f;
+}
+
+.new-note-btn p {
+  margin-right: 0.5rem;
+}
+
+.ri-chat-new-line {
+  padding: 0.5rem;
+}
+
 .note-wrapper {
   display: flex;
   justify-content: center;
