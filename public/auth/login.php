@@ -167,7 +167,7 @@
                                     </div>
                                 </div>
                                 <div class="other">
-                                    <p><a href="#"> Forgot Password?</a></p>
+                                    <p><a href="../../server/requestreset.php"> Forgot Password?</a></p>
                                     <p>Don't have an account? <a href="register.php">Sign up now!</a></p>
                                 </div>
                         </div>
