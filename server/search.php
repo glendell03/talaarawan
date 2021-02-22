@@ -6,7 +6,7 @@ require_once "config.php";
 
 if (isset($_POST['query'])) {
 
-    $query = "SELECT * FROM notes WHERE user_id = $id AND title LIKE '%{$_POST['query']}%'";
+    $query = "SELECT * FROM notes WHERE user_id = $id AND title OR description LIKE '%{$_POST['query']}%'";
     $result = mysqli_query($link, $query);
 
     if (mysqli_num_rows($result) > 0) {
@@ -40,5 +40,5 @@ if (isset($_POST['query'])) {
         <img class='no-data' src='../public/img/nodata.svg' />
 
 <?php }
-} 
+}
 ?>
