@@ -21,33 +21,6 @@
 git clone https://github.com/{your username}/talaarawan.git
 ```
 
-## Push your code 
-1. 
-
-```bash
-git add .
-```
-
-2. 
-
-```bash
-git commit -m "Describe mo kung ano ginawa mo"
-```
-
-2. 
-
-```bash
-git push -u origin main
-```
-
-3. Go to your talaarawan repository
-
-4. Click pull request
-![pull request](https://github.com/glendell03/talaarawan/blob/main/pull-request.png)
-
-5. Create Pull request
-
-
 ## Sync your fork with the original Git repo
 - If you list the configured remote repository you will only see your fork as origin:
 ```
@@ -81,3 +54,30 @@ git fetch upstream
 ```
 git merge upstream/main
 ```
+
+## Push your code 
+1. 
+
+```bash
+git add .
+```
+
+2. 
+
+```bash
+git commit -m "Describe mo kung ano ginawa mo"
+```
+
+2. 
+
+```bash
+git push -u origin main
+```
+
+3. Go to your talaarawan repository
+
+4. Click pull request
+![pull request](https://github.com/glendell03/talaarawan/blob/main/pull-request.png)
+
+5. Create Pull request
+
