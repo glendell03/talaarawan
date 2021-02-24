@@ -1,6 +1,6 @@
 # Talaarawan
 
-![talaarawan](https://drive.google.com/file/d/1-wHSsyrfvk10ropGWWRvg7BfnRNYvFze/view?usp=sharing)
+![talaarawan](https://github.com/glendell03/talaarawan/blob/main/talaarawan.PNG)
 
 # Features
 1. Login System with validation
