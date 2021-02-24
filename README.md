@@ -1,4 +1,14 @@
-# talaarawan
+# Talaarawan
+
+![talaarawan](https://drive.google.com/file/d/1-wHSsyrfvk10ropGWWRvg7BfnRNYvFze/view?usp=sharing)
+
+# Features
+1. Login System with validation
+2. Forgot Password 
+3. Create New Note
+4. Update Note
+5. Delete Note
+6. Search Notes with their Title or Description
 
 ## Building from Source 🏗️
 1. **Fork the repository**
