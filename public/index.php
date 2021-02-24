@@ -15,18 +15,19 @@ if ($_SESSION["loggedin"] === null) {
 <!DOCTYPE html>
 <html lang="en">
 
-<he <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Talaarawan</title>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/searchs.css">
-    <link rel="stylesheet" href="./css/notes.css">
-    <link rel="stylesheet" href="./css/new.css">
-    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-    <script src="./js/modal.js"></script>
-    <script src="./js/search1.js"></script>
+    <head> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Talaarawan</title>
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/searchs.css">
+        <link rel="stylesheet" href="./css/notes.css">
+        <link rel="stylesheet" href="./css/new.css">
+        <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+        <script src="./js/modal.js"></script>
+        <script src="./js/search1.js"></script>
+        <link rel="icon" href="./logo_1.png">
     </head>
 
     <body>
