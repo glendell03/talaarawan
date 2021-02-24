@@ -57,7 +57,7 @@ origin  https://github.com/YOUR_USERNAME/YOUR_FORK.git (push)
 ```
 1. **Add a new remote upstream repository**
 ```
-git remote add upstream https://github.com/ALT-FOUR/talaarawan.git
+git remote add upstream https://github.com/glendell03/talaarawan.git
 ```
 - You can now see both the original repository and the fork
 ```
