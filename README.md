@@ -56,20 +56,12 @@ git merge upstream/main
 ```
 
 ## Push your code 
-1. 
-
 ```bash
 git add .
 ```
-
-2. 
-
 ```bash
 git commit -m "Describe mo kung ano ginawa mo"
 ```
-
-2. 
-
 ```bash
 git push -u origin main
 ```
