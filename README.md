@@ -2,6 +2,8 @@
 
 ![talaarawan](https://github.com/glendell03/talaarawan/blob/main/talaarawan.PNG)
 
+A simple diary web application built by using PHP. It is a personal journal for your notes and thoughts.
+
 # Features
 1. Login System with validation
 2. Forgot Password 
